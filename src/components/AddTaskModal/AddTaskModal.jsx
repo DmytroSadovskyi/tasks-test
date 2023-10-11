@@ -1,4 +1,4 @@
-import TaskForm from "../TaskForm";
+import AddTaskForm from "../AddTaskForm";
 import Modal from "react-bootstrap/Modal";
 
 const AddTaskModal = ({ showModal, onClose, onHide }) => {
@@ -9,7 +9,7 @@ const AddTaskModal = ({ showModal, onClose, onHide }) => {
           <Modal.Title>Add Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <TaskForm showModal={showModal} onClose={onClose} />
+          <AddTaskForm showModal={showModal} onClose={onClose} />
         </Modal.Body>
       </Modal>
     </div>
