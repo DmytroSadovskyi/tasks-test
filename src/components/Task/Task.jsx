@@ -44,10 +44,10 @@ const Task = ({ task }) => {
         <p className={css.text}>{editedText}</p>
       </div>
       <div className={css.buttons}>
-        <button className={css.btn} onClick={handleEdit}>
+        <button className={css.btn} onClick={handleEdit} aria-label="edit">
           <MdEdit size={24} />
         </button>
-        <button className={css.btn} onClick={handleDelete}>
+        <button className={css.btn} onClick={handleDelete} aria-label="delete">
           <MdClose size={24} />
         </button>
       </div>
