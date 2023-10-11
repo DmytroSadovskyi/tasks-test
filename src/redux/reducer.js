@@ -1,13 +1,7 @@
 import { combineReducers } from "redux";
 import { statusFilters } from "./constants";
 
-const tasksInitialState = [
-  { id: 0, title: "Task 1", text: "Learn HTML and CSS", completed: true },
-  { id: 1, title: "Task 2", text: "Get good at JavaScript", completed: true },
-  { id: 2, title: "Task 3", text: "Master React", completed: false },
-  { id: 3, title: "Task 4", text: "Discover Redux", completed: false },
-  { id: 4, title: "Task 5", text: "Build amazing apps", completed: false },
-];
+const tasksInitialState = [];
 
 const tasksReducer = (state = tasksInitialState, action) => {
   switch (action.type) {
