@@ -2,7 +2,7 @@ import { MdClose, MdEdit } from "react-icons/md";
 import css from "./Task.module.css";
 import { useDispatch } from "react-redux";
 import { deleteTask, toggleCompleted, updateTask } from "../../redux/actions";
-import TaskModal from "../Modal";
+import EditTaskModal from "../EditTaskModal";
 import { useState } from "react";
 
 const Task = ({ task }) => {
@@ -21,6 +21,12 @@ const Task = ({ task }) => {
 
   const handleSaveChanges = () => {
     dispatch(updateTask(task.id, editedTitle, editedText));
+    setModalShow(false);
+  };
+
+  const handleCloseModal = () => {
+    setEditedTitle(task.title);
+    setEditedText(task.text);
     setModalShow(false);
   };
 
@@ -45,9 +51,9 @@ const Task = ({ task }) => {
           <MdClose size={24} />
         </button>
       </div>
-      <TaskModal
+      <EditTaskModal
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onHide={handleCloseModal}
         editedTitle={editedTitle}
         editedText={editedText}
         setEditedTitle={setEditedTitle}
