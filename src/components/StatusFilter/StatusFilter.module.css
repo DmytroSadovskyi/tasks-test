@@ -2,3 +2,26 @@
   display: flex;
   gap: 4px;
 }
+
+.selectedButton {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+}
+
+.button {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  background-color: #e2e5e8;
+  color: inherit;
+}
