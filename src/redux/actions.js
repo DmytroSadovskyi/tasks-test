@@ -1,12 +1,24 @@
 import { nanoid } from "nanoid";
 
-export const addTask = (text) => {
+export const addTask = (title, text) => {
   return {
     type: "tasks/addTask",
     payload: {
       id: nanoid(),
       completed: false,
+      title,
       text,
+    },
+  };
+};
+
+export const updateTask = (taskId, newTitle, newText) => {
+  return {
+    type: "tasks/updateTask",
+    payload: {
+      id: taskId,
+      title: newTitle,
+      text: newText,
     },
   };
 };

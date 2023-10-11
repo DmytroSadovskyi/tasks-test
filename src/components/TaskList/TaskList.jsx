@@ -1,4 +1,4 @@
-import Task from "../Task/Task";
+import Task from "../Task";
 import css from "./TaskList.module.css";
 import { useSelector } from "react-redux";
 import { statusFilters } from "../../redux/constants";

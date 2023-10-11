@@ -1,11 +1,21 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 20px;
+
   padding: 8px 0;
 }
 
-.text {
+.buttons {
+  display: flex;
+  gap: 3px;
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-grow: 1;
 }
 
@@ -21,6 +31,9 @@
   border-radius: 4px;
   background-color: transparent;
   cursor: pointer;
+}
+
+.btn:last-child {
   color: #f44336;
 }
 
