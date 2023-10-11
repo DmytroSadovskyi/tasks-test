@@ -2,6 +2,7 @@
   "name": "tasks-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://DmytroSadovskyi.github.io/tasks-test/",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
     "@testing-library/jest-dom": "^5.17.0",
