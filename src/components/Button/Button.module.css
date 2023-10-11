@@ -9,11 +9,6 @@
   color: inherit;
 }
 
-.btn.isSelected {
-  background-color: #1976d2;
-  color: #fff;
-}
-
 .btn:hover {
   background-color: #1976d2;
   color: #fff;
