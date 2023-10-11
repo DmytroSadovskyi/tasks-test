@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import Button from "../Button";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../redux/actions";
-
+import { useSelector } from "react-redux";
+import { getTasks } from "../../redux/selectors";
 const AddTaskForm = ({ showModal, onClose }) => {
   const dispatch = useDispatch();
+  const tasks = useSelector(getTasks);
 
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [validated, setValidated] = useState(false);
 
+  const existingTask = tasks.find((task) => task.title === title);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.stopPropagation();
       setValidated(true);
+    } else if (existingTask) {
+      alert("You already have a task with such title");
+      setTitle("");
+      setText("");
+      return;
     } else {
       dispatch(addTask(title, text));
       onClose();
